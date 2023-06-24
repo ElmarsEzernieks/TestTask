@@ -1,0 +1,194 @@
+.container {
+    width: 100%;
+    max-width: 1200px; /* or whatever maximum width you want for larger screens */
+    margin: 0 auto; /* this centers the content */
+    padding: 0 20px; /* add some space on the sides for small screens */
+  }
+  
+  .book-section {
+    display: flex;
+  }
+  
+  .book-info {
+    margin-right: 20px;
+  }
+  
+  .book-info .average-rating,
+  .book-info .rate-book {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: var(--typography-medium);
+  }
+  
+  .book-info .average-rating img,
+  .book-info .rate-book img {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .book-description {
+    font-size: 16px;
+    font-family: Inter;
+    line-height: 24px;
+    color: var(--typography-medium);
+    text-align: left;
+  }
+  
+  .input-box {
+    margin-top: 48px;
+  }
+  
+  .review-title {
+    color: rgba(0, 0, 0, 0.95);
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 700;
+    word-wrap: break-word;
+    margin-bottom: 24px;
+  }
+  
+  .rate-and-review {
+    display: flex;
+    flex-direction: column;  /* Add this line */
+    gap: 24px;
+  }
+  
+  .rate-book {
+    flex: 1;
+  }
+  
+  .rate-title {
+    color: rgba(0, 0, 0, 0.95);
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 28px;
+    word-wrap: break-word;
+  }
+  
+  .write-review textarea {
+    width: 508px;
+    height: 208px;
+    background: white;
+    border-radius: 4px;
+    border: 0.5px solid #DDE1E3;
+    padding: 16px;
+    font-size: 16px;
+    resize: none;
+    margin-top: 24px;
+  }
+  
+  .submit-review {
+    display: flex;
+    justify-content: left;  /* Modify this line */
+    margin-top: 24px;
+  }
+  
+  .submit-review button {
+    display: inline-flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 24px;
+    border: 2px solid #3980B2;
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 24px;
+    color: #3980B2;
+  }
+  
+  
+  .submit-review button:hover {
+    background-color: #3980B2;
+    color: white;
+  }
+  
+  .review-submitted {
+    justify-content: flex-start; 
+    align-items: flex-start;
+    display: inline-flex;
+    padding: 6px;
+    gap: 10px;
+    border-radius: 4px;
+    background: var(--ui-light-blue, #CFEBFF);
+    color: var(--typography-dark, rgba(0, 0, 0, 0.95));
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 16px;
+  }
+  
+  .back-to-books {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+    width: 987px;
+    height: 24px;
+    margin-bottom: 40px;
+    color: rgba(0, 0, 0, 0.95); /* Link color */
+    text-decoration: none; /* Remove default link underline */
+    color: rgba(0, 0, 0, 0.95);
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: black;
+    line-height: 24px;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-image: url("assets/back.svg");
+    background-repeat: no-repeat;
+    padding-left: 25px; /* adjust as per your needs */
+  }
+  
+  .back-to-books:hover .back-to-books-text {
+    text-decoration: underline;
+  }
+  
+  u {
+   margin-top: 5px;
+   margin-bottom: 0px;
+   text-decoration: none;
+  }
+  
+  p {
+    margin-bottom: 0px;
+  }
+  
+  .book-section-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .book-section {
+    display: flex;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .book-section-wrapper {
+      flex-direction: column;
+    }
+  
+    .container {
+      padding: 0 10px; /* decrease the side space for small screens */
+      max-width: 100%;
+    box-sizing: border-box;
+    }
+  
+    .book-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
