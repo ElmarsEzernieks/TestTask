@@ -1,165 +1,166 @@
-
 .flex-container {
-    display: flex;
-    width: 100%; /* Adjust width to be full width on small screens */
-    align-items: flex-start;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.book-card-small {
+  width: 100%;
+  margin: 1.5%;
+}
+
+.book-card-large {
+  width: 100%;
+  margin: 1.5%;
+}
+
+.book-card-link {
+  text-decoration: none;
+}
+
+.book-card {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.image-container {
+  width: 30%;
+  max-width: 120px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container.small {
+  width: 88px;
+  height: 110px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.image-container.large {
+  width: 30%;
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.book-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.book-details {
+  flex-grow: 1;
+  margin: 16px 0px;
+  text-align: left;
+  margin-left: 14px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-title {
+  color: rgba(0, 0, 0, 0.95);
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+
+.book-author {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 4px;
+}
+
+.book-year {
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+.book-price {
+  color: rgba(0, 0, 0, 0.95);
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.book-publisher {
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+.book-card-link:active,
+.book-card-link:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+@media (min-width: 820px) {
+  .book-card {
+    flex-direction: row;
+  }
+
+  .flex-container {
+    width: 331px;
     gap: 14px;
   }
-  
-  .book-card-small {
-    width: 100%; /* Adjust width to be full width on small screens */
-    margin: 1.5%;
-  }
-  
-  .book-card-large {
-    width: 100%; /* Adjust width to be full width on small screens */
-    margin: 1.5%;
-  }
-  
-  .book-card-link {
-    text-decoration: none;
-  }
-  
-  .book-card {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    margin-bottom: 20px;
-  }
-  
-  .image-container {
-    width: 30%; /* Adjust the width to your preference */
-    max-width: 120px; /* Set a maximum width for better responsiveness */
-    flex-shrink: 0;
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .image-container.small {
-    width: 30%; /* Adjust the width to your preference */
-    height: auto; /* Adjust height automatically */
-    flex-shrink: 0;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .image-container.large {
-    width: 30%; /* Adjust the width to your preference */
-    height: auto; /* Adjust height automatically */
-    flex-shrink: 0;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .book-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  .book-details {
-    flex-grow: 1;
-    margin: 16px 0px; /* Add vertical margin, remove horizontal margin */
-    text-align: left;
-  }
-  
-  .text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .book-title {
-    color: rgba(0, 0, 0, 0.95);
+  .book-card-small .book-title {
     font-size: 16px;
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
+  }
+
+  .book-card-small .book-title {
+    font-size: 16px;
+  }
+
+  .book-card-small .book-author,
+  .book-card-small .book-year,
+  .book-card-small .book-price,
+  .book-card-small .book-publisher {
+    font-size: 14px;
+  }
+
+  .image-container.small {
+    width: 88px;
+    height: 110px;
+  }
+
+  .image-container.large {
+    width: 120px;
+    height: 160px;
+  }
+  .book-details {
+    margin-left: 14px;
+  }
+  .book-card-large {
+    width: 40%;
+  }
+
+  .book-card-large .book-author,
+  .book-card-large .book-year,
+  .book-card-large .book-publisher {
+    font-size: 16px !important;
     line-height: 24px;
-    margin-bottom: 4px;
   }
-  
-  .book-author {
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 14px;
-    font-family: "Inter", sans-serif;
-    margin-bottom: 4px;
-  }
-  
-  .book-year {
-    color: rgba(0, 0, 0, 0.55);
-    font-size: 14px;
-    font-family: "Inter", sans-serif;
-  }
-  
-  .book-price {
-    color: rgba(0, 0, 0, 0.95);
-    font-size: 14px;
-    font-family: "Inter", sans-serif;
+
+  .book-card-large .book-price {
     font-weight: 700;
-    margin-bottom: 4px;
   }
-  
-  .book-publisher {
-    color: rgba(0, 0, 0, 0.55);
-    font-size: 14px;
-    font-family: "Inter", sans-serif;
-  }
-  
-  .book-card-link:active,
-  .book-card-link:focus {
-    text-decoration: none;
-    outline: none;
-  }
-  
-  @media (min-width: 768px) {
-    .book-card {
-      flex-direction: row; /* Display contents horizontally on larger screens */
-    }
-  
-    .flex-container {
-      width: 331px; /* Set a fixed width on larger screens */
-    }
-    .book-card-small {
-      width: 30%; /* Use a percentage width on larger screens */
-    }
-  
-    .book-card-small .book-title {
-      font-size: 16px;
-    }
-  
-    .book-card-small .book-author,
-    .book-card-small .book-year,
-    .book-card-small .book-price,
-    .book-card-small .book-publisher {
-      font-size: 14px;
-    }
-  
-    .image-container.small {
-      width: 88px; /* Fixed width on large screens */
-      height: 110px; /* Fixed height on large screens */
-    }
-  
-    .image-container.large {
-      width: 120px; /* Fixed width on large screens */
-      height: 160px; /* Fixed height on large screens */
-    }
-    .book-details {
-      margin-left: 16px; /* Add horizontal margin on large screens */
-    }
-    .book-card-large {
-      width: 40%; /* Use a percentage width on larger screens */
-    }
-  
-    .book-card-large .book-author,
-    .book-card-large .book-year,
-    .book-card-large .book-publisher {
-      font-size: 16px !important;
-      line-height: 24px;
-    }
-  
-    .book-card-large .book-price {
-      font-weight: 700;
-    }
-  }
+}
