@@ -91,6 +91,7 @@
   color: rgba(0, 0, 0, 0.55);
   font-size: 14px;
   font-family: "Inter", sans-serif;
+  margin-bottom: 4px;
 }
 
 .book-price {
@@ -105,6 +106,7 @@
   color: rgba(0, 0, 0, 0.55);
   font-size: 14px;
   font-family: "Inter", sans-serif;
+  margin-bottom: 4px;
 }
 
 .book-card-link:active,
@@ -147,16 +149,20 @@
     height: 160px;
   }
   .book-details {
+    flex-grow: 1;
+    margin: 16px 0px; /* Adjust this */
+    text-align: left;
     margin-left: 14px;
   }
+
   .book-card-large {
     width: 40%;
   }
 
-  .book-card-large .book-author,
-  .book-card-large .book-year,
-  .book-card-large .book-publisher {
-    font-size: 16px !important;
+  .book-card-large.book-details .book-author,
+  .book-card-large.book-details .book-year,
+  .book-card-large.book-details .book-publisher {
+    font-size: 24px;
     line-height: 24px;
   }
 

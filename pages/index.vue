@@ -9,7 +9,9 @@
       />
     </div>
     <div v-if="searchQuery">
-      <p class="result-text" v-if="resultCount > 0">Results: {{ resultCount }}</p>
+      <p class="result-text" v-if="resultCount > 0">
+        Results: {{ resultCount }}
+      </p>
       <div class="book-container">
         <div class="book-grid">
           <BookCard
@@ -22,11 +24,14 @@
         </div>
       </div>
     </div>
-    <img v-else src="/images/TempBook.png" alt="Default Image" class="default-image" />
+    <img
+      v-else
+      src="/images/TempBook.png"
+      alt="Default Image"
+      class="default-image"
+    />
   </div>
 </template>
-
-
 
 <script>
 import BookCard from "~/components/BookCard.vue";
@@ -44,12 +49,16 @@ export default {
   methods: {
     navigateToBookDetail(bookId) {
       this.$router.push(`/book/${bookId}`);
-    }
+    },
   },
   computed: {
     filteredBooks() {
-      return this.books.filter((book) =>
-        book.title.toLowerCase().includes(this.searchQuery.toLowerCase())
+      const query = this.searchQuery.toLowerCase();
+      return this.books.filter(
+        (book) =>
+          book.title.toLowerCase().includes(query) ||
+          book.isbn.toLowerCase().includes(query) ||
+          book.author.toLowerCase().includes(query)
       );
     },
     resultCount() {
@@ -76,5 +85,3 @@ export default {
 <style scoped>
 @import "./index.css";
 </style>
-
-
